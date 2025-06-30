@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { projects } from '../data/projects';
+
+// Get featured projects (first 3)
+const featuredProjects = projects.slice(0, 3);
+---
+
+<Layout title="Austin Media Co. | Film & Video Production in Austin, Texas">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Authentic Austin Stories</h1>
+        <p>We create compelling video content that captures the heart of Austin's creative spirit. From commercials to documentaries, we bring your vision to life.</p>
+        <a href="/portfolio" class="cta-button">View Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Work Section -->
+  <section class="section-lg">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2>Featured Projects</h2>
+        <p>A selection of our recent work across commercials, music videos, and documentaries.</p>
+      </div>
+      
+      <div class="grid grid-3">
+        {featuredProjects.map((project) => (
+          <div class="project-card">
+            <img src={project.thumbnail} alt={project.title} class="project-image" />
+            <div class="project-info">
+              <span class="project-type">{project.type.replace('-', ' ')}</span>
+              <h3 class="project-title">{project.title}</h3>
+              <p class="project-client">{project.client} • {project.year}</p>
+              <p class="project-description">{project.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div class="text-center mt-4">
+        <a href="/portfolio" class="cta-button">See All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="section" style="background: rgba(255, 255, 255, 0.02);">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2>What We Do</h2>
+        <p>Full-service video production based in the heart of Austin, Texas.</p>
+      </div>
+      
+      <div class="grid grid-4">
+        <div class="card text-center">
+          <h3 class="mb-2">Commercial Production</h3>
+          <p>Brand campaigns and product videos that connect with your audience.</p>
+        </div>
+        
+        <div class="card text-center">
+          <h3 class="mb-2">Music Videos</h3>
+          <p>Creative videos for Austin's incredible music scene and beyond.</p>
+        </div>
+        
+        <div class="card text-center">
+          <h3 class="mb-2">Documentary Work</h3>
+          <p>Authentic storytelling that explores culture and community.</p>
+        </div>
+        
+        <div class="card text-center">
+          <h3 class="mb-2">Event Coverage</h3>
+          <p>Comprehensive coverage of festivals, conferences, and special events.</p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <a href="/services" class="cta-button">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section-lg">
+    <div class="container text-center">
+      <h2 class="mb-3">Ready to Tell Your Story?</h2>
+      <p class="mb-4">Let's create something amazing together. Based in Austin, working everywhere.</p>
+      <a href="/contact" class="cta-button">Get In Touch</a>
+    </div>
+  </section>
+</Layout>

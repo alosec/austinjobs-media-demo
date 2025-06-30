@@ -1,0 +1,104 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm';
+---
+
+<Layout title="Contact | Austin Media Co." 
+       description="Get in touch with Austin Media Co. for your video production needs. Based in Austin, Texas, working everywhere.">
+  
+  <section class="section-lg" style="padding-top: 8rem;">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h1>Let's Create Something Amazing</h1>
+        <p>Ready to bring your vision to life? We'd love to hear about your project and explore how we can help tell your story.</p>
+      </div>
+      
+      <div class="grid grid-2" style="gap: 3rem; align-items: start;">
+        <!-- Contact Information -->
+        <div>
+          <div class="card">
+            <h3 class="mb-3 text-gradient">Get In Touch</h3>
+            <div style="margin-bottom: 2rem;">
+              <h4 style="color: #ffffff; margin-bottom: 0.5rem;">Email</h4>
+              <p style="margin-bottom: 1.5rem;">
+                <a href="mailto:hello@austinmediaco.com" style="color: #ff8e53;">hello@austinmediaco.com</a>
+              </p>
+              
+              <h4 style="color: #ffffff; margin-bottom: 0.5rem;">Phone</h4>
+              <p style="margin-bottom: 1.5rem;">
+                <a href="tel:+15125551234" style="color: #ff8e53;">(512) 555-1234</a>
+              </p>
+              
+              <h4 style="color: #ffffff; margin-bottom: 0.5rem;">Location</h4>
+              <p style="margin-bottom: 1.5rem;">Austin, Texas<br />Serving Austin and beyond</p>
+              
+              <h4 style="color: #ffffff; margin-bottom: 0.5rem;">Response Time</h4>
+              <p>We typically respond within 24 hours</p>
+            </div>
+          </div>
+          
+          <div class="card" style="margin-top: 2rem;">
+            <h3 class="mb-3 text-gradient">Project Types We Love</h3>
+            <ul style="color: #cccccc; padding-left: 1.5rem;">
+              <li style="margin-bottom: 0.5rem;">Brand commercials and campaigns</li>
+              <li style="margin-bottom: 0.5rem;">Music videos for local and touring artists</li>
+              <li style="margin-bottom: 0.5rem;">Documentary and storytelling projects</li>
+              <li style="margin-bottom: 0.5rem;">Event coverage and live streaming</li>
+              <li style="margin-bottom: 0.5rem;">Corporate videos and training content</li>
+              <li style="margin-bottom: 0.5rem;">Social media and digital content</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div>
+          <ContactForm client:load />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="section" style="background: rgba(255, 255, 255, 0.02);">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions about our process and services.</p>
+      </div>
+      
+      <div class="grid grid-2">
+        <div class="card">
+          <h4 class="mb-2" style="color: #ffffff;">What's your typical project timeline?</h4>
+          <p>Most projects take 2-6 weeks from concept to final delivery, depending on complexity. We'll provide a detailed timeline during our initial consultation.</p>
+        </div>
+        
+        <div class="card">
+          <h4 class="mb-2" style="color: #ffffff;">Do you work outside of Austin?</h4>
+          <p>Absolutely! While we're based in Austin, we travel throughout Texas and beyond for the right projects. Travel costs are typically included in project quotes.</p>
+        </div>
+        
+        <div class="card">
+          <h4 class="mb-2" style="color: #ffffff;">What's included in your services?</h4>
+          <p>We offer full-service production including pre-production planning, filming, post-production editing, color grading, sound design, and final delivery in your preferred formats.</p>
+        </div>
+        
+        <div class="card">
+          <h4 class="mb-2" style="color: #ffffff;">How do you price projects?</h4>
+          <p>Every project is unique, so we provide custom quotes based on scope, timeline, and specific requirements. We're transparent about costs and work within your budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action -->
+  <section class="section-lg">
+    <div class="container text-center">
+      <h2 class="mb-3">Ready to Start Your Project?</h2>
+      <p class="mb-4">The best projects start with great conversations. Let's discuss your vision and make it reality.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="mailto:hello@austinmediaco.com" class="cta-button">Email Us</a>
+        <a href="tel:+15125551234" class="cta-button" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);">Call Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>

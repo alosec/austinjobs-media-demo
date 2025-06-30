@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PortfolioFilter from '../components/PortfolioFilter';
+import { projects } from '../data/projects';
+---
+
+<Layout title="Portfolio | Austin Media Co." 
+       description="View our portfolio of commercials, music videos, documentaries, and short films created in Austin, Texas.">
+  
+  <section class="section-lg" style="padding-top: 8rem;">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h1>Our Portfolio</h1>
+        <p>A collection of our video production work across commercials, music videos, documentaries, and short films. Each project tells a unique story rooted in Austin's creative culture.</p>
+      </div>
+      
+      <!-- React Component for Filtering -->
+      <PortfolioFilter projects={projects} client:load />
+    </div>
+  </section>
+  
+  <!-- Call to Action -->
+  <section class="section">
+    <div class="container text-center">
+      <h2 class="mb-3">Like What You See?</h2>
+      <p class="mb-4">Ready to create something amazing together? Let's discuss your next project.</p>
+      <a href="/contact" class="cta-button">Start Your Project</a>
+    </div>
+  </section>
+</Layout>

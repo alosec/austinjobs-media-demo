@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { team } from '../data/team';
+---
+
+<Layout title="About | Austin Media Co." 
+       description="Meet the Austin Media Co. team - experienced video production professionals creating authentic stories in Austin, Texas.">
+  
+  <section class="section-lg" style="padding-top: 8rem;">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h1>About Austin Media Co.</h1>
+        <p>We're a passionate team of filmmakers, storytellers, and creative professionals based in the heart of Austin, Texas. Our mission is to create authentic video content that captures the unique spirit of our city and tells compelling stories that resonate with audiences.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Our Story Section -->
+  <section class="section" style="background: rgba(255, 255, 255, 0.02);">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 3rem;">
+        <div>
+          <h2 class="mb-3">Our Story</h2>
+          <p class="mb-3">
+            Founded in 2021, Austin Media Co. emerged from a shared love of storytelling and Austin's vibrant creative community. What started as a small collective of filmmakers has grown into a full-service production company, but we've never lost sight of our roots.
+          </p>
+          <p class="mb-3">
+            We believe that great video content comes from understanding your subject deeply. Whether we're creating a commercial for a local business, documenting Austin's music scene, or telling the story of a community organization, we approach each project with curiosity, creativity, and respect.
+          </p>
+          <p>
+            Austin is our home, and it shows in our work. We know the city's rhythms, its people, and its stories. But our perspective isn't limited to Austin – we've worked with clients across Texas and beyond, bringing that same authentic approach to every project.
+          </p>
+        </div>
+        
+        <div>
+          <img 
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" 
+            alt="Austin Media Co. team at work" 
+            style="width: 100%; height: 400px; object-fit: cover; border-radius: 12px;"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Team Section -->
+  <section class="section-lg">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2>Meet the Team</h2>
+        <p>The creative minds behind Austin Media Co.</p>
+      </div>
+      
+      <div class="grid grid-2">
+        {team.map((member) => (
+          <div class="team-card card">
+            <img src={member.image} alt={member.name} class="team-image" />
+            <h3 class="team-name">{member.name}</h3>
+            <p class="team-role">{member.role}</p>
+            <p class="team-bio mb-3">{member.bio}</p>
+            
+            <div>
+              <h4 style="color: #ffffff; margin-bottom: 0.5rem; font-size: 1rem;">Specialties:</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                {member.specialties.map((specialty) => (
+                  <span style="
+                    background: rgba(255, 107, 53, 0.2); 
+                    color: #ff8e53; 
+                    padding: 0.25rem 0.75rem; 
+                    border-radius: 20px; 
+                    font-size: 0.875rem; 
+                    font-weight: 500;
+                  ">{specialty}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <!-- Values Section -->
+  <section class="section" style="background: rgba(255, 255, 255, 0.02);">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2>What Drives Us</h2>
+        <p>The values that guide our work and our relationships with clients.</p>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card text-center">
+          <h3 class="mb-2 text-gradient">Authenticity</h3>
+          <p>We believe the best stories are true stories. Our approach is always honest, genuine, and respectful of the subjects we're documenting.</p>
+        </div>
+        
+        <div class="card text-center">
+          <h3 class="mb-2 text-gradient">Collaboration</h3>
+          <p>Great video is a team effort. We work closely with our clients, treating every project as a true partnership from concept to completion.</p>
+        </div>
+        
+        <div class="card text-center">
+          <h3 class="mb-2 text-gradient">Quality</h3>
+          <p>We're committed to excellence in every aspect of production, from pre-planning to final delivery. Your story deserves nothing less.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action -->
+  <section class="section-lg">
+    <div class="container text-center">
+      <h2 class="mb-3">Let's Work Together</h2>
+      <p class="mb-4">We'd love to hear about your project and explore how we can bring your vision to life.</p>
+      <a href="/contact" class="cta-button">Start a Conversation</a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { services } from '../data/team';
+---
+
+<Layout title="Services | Austin Media Co." 
+       description="Professional video production services in Austin, Texas including commercials, music videos, documentaries, and event coverage.">
+  
+  <section class="section-lg" style="padding-top: 8rem;">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h1>Our Services</h1>
+        <p>Comprehensive video production services tailored to Austin's creative community and beyond. From concept to completion, we bring your vision to life.</p>
+      </div>
+      
+      <div class="grid grid-2">
+        {services.map((service) => (
+          <div class="card">
+            <h3 class="mb-2 text-gradient">{service.name}</h3>
+            <p class="mb-3">{service.description}</p>
+            
+            <h4 style="color: #ffffff; margin-bottom: 1rem;">What We Offer:</h4>
+            <ul style="color: #cccccc; padding-left: 1.5rem;">
+              {service.examples.map((example) => (
+                <li style="margin-bottom: 0.5rem;">{example}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <!-- Process Section -->
+  <section class="section" style="background: rgba(255, 255, 255, 0.02);">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2>Our Process</h2>
+        <p>How we bring your video project from concept to completion.</p>
+      </div>
+      
+      <div class="grid grid-4">
+        <div class="card text-center">
+          <div style="
+            width: 60px; 
+            height: 60px; 
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8e53 100%); 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin: 0 auto 1rem; 
+            font-weight: 700; 
+            font-size: 1.5rem;
+          ">1</div>
+          <h4 class="mb-2">Discovery</h4>
+          <p>We start by understanding your goals, audience, and vision for the project.</p>
+        </div>
+        
+        <div class="card text-center">
+          <div style="
+            width: 60px; 
+            height: 60px; 
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8e53 100%); 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin: 0 auto 1rem; 
+            font-weight: 700; 
+            font-size: 1.5rem;
+          ">2</div>
+          <h4 class="mb-2">Planning</h4>
+          <p>Detailed pre-production including scripting, storyboarding, and scheduling.</p>
+        </div>
+        
+        <div class="card text-center">
+          <div style="
+            width: 60px; 
+            height: 60px; 
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8e53 100%); 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin: 0 auto 1rem; 
+            font-weight: 700; 
+            font-size: 1.5rem;
+          ">3</div>
+          <h4 class="mb-2">Production</h4>
+          <p>Professional filming with our experienced crew and high-quality equipment.</p>
+        </div>
+        
+        <div class="card text-center">
+          <div style="
+            width: 60px; 
+            height: 60px; 
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8e53 100%); 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin: 0 auto 1rem; 
+            font-weight: 700; 
+            font-size: 1.5rem;
+          ">4</div>
+          <h4 class="mb-2">Post-Production</h4>
+          <p>Expert editing, color grading, and sound design to perfect your story.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action -->
+  <section class="section-lg">
+    <div class="container text-center">
+      <h2 class="mb-3">Ready to Get Started?</h2>
+      <p class="mb-4">Every great video starts with a conversation. Let's discuss your project and bring your vision to life.</p>
+      <a href="/contact" class="cta-button">Get a Quote</a>
+    </div>
+  </section>
+</Layout>
