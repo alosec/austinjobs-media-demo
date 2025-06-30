@@ -11,7 +11,7 @@ export const team: TeamMember[] = [
     name: 'Sarah Chen',
     role: 'Director & Co-Founder',
     bio: 'Austin native with 8 years in film production. Started with local music videos and grew into commercial work for major brands. Passionate about storytelling that captures authentic Austin culture.',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face',
+    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face',
     specialties: ['Commercial Direction', 'Music Videos', 'Brand Storytelling']
   },
   {
